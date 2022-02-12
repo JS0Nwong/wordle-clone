@@ -38,9 +38,14 @@ guessRows.forEach((guessRows, rowIndex) => {
 //KEYBOARD EVENT LISTENER
 
 document.addEventListener('keydown', (e) => {
-    if(e.key == /[a-z]/)
+    if(e.key.match(/^[a-z]+$/i))
     {
+        addLetter(e.key);
         console.log(e.key);
+    }
+    if(e.key === 'Backspace')
+    {
+        deleteLetter();
     }
 });
 
@@ -85,12 +90,12 @@ const addLetter = (key) =>
 
 const deleteLetter = () => {
     if(currentTile > 0)
-    {
-        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + (currentTile - 1));
-        tile.textContent = '';
-        guessRows[currentRow][currentTile - 1] = '';
-        tile.setAttribute('data', '');
+    {   
         currentTile--;
+        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile);
+        tile.textContent = '';
+        guessRows[currentRow][currentTile] = '';
+        tile.setAttribute('data', '');
     }
 }
 
@@ -99,7 +104,7 @@ const checkRow = () => {
 
     if(currentTile > 4)
     {
-
+        
     }
 }
 

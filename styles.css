@@ -53,6 +53,9 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 20px, 30px);
+    font-weight: 600;
 }
 
 
@@ -99,4 +102,13 @@ body
     {
         width: 50px;
     }
+}
+
+.essay
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
