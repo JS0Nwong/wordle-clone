@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -15,76 +16,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
 </head>
 <body>
-    <div class="wrapper container-fluid">
-        <div class="row">
-            <div class="col-md-4"></div>
-
-            <div class="col-md-4">
-                <div class="center-content">
-
-                    <div class="navbar-wrapper">
-                        <nav class="nav-bar">
-                            <div class="faq">
-                                <i class="far fa-question-circle"></i>
-                            </div>
-                            <h1 class="title">Wordle Clone<span><a href = "secret.html">.</a></span></h1>
-                            <div class="settings">
-                                <i class="far fa-chart-bar"></i>
-                                <i class="fas fa-cog"></i>
-                            </div>
-                        </nav>
-                    </div>
-
-                    <div class="guess-container" id = "guess">
-
-                    </div>
-
-                    <div class="keyboard" id = "keyboard">
-                        <div class="row keyboard-row" id = "keyboard-row-1">
-                            <button class="key">q</button>
-                            <button class="key">w</button>
-                            <button class="key">e</button>
-                            <button class="key">r</button>
-                            <button class="key">t</button>
-                            <button class="key">y</button>
-                            <button class="key">u</button>
-                            <button class="key">i</button>
-                            <button class="key">o</button>
-                            <button class="key">p</button>
-                        </div>
-                        <div class="row keyboard-row" id = "keyboard-row-2">
-                            <button class="key">a</button>
-                            <button class="key">s</button>
-                            <button class="key">d</button>
-                            <button class="key">f</button>
-                            <button class="key">g</button>
-                            <button class="key">h</button>
-                            <button class="key">j</button>
-                            <button class="key">k</button>
-                            <button class="key">l</button>
-                        </div>
-                        <div class="row keyboard-row" id = "keyboard-row-3">
-                            <button class="key submit">enter</button>
-                            <button class="key">z</button>
-                            <button class="key">x</button>
-                            <button class="key">c</button>
-                            <button class="key">v</button>
-                            <button class="key">b</button>
-                            <button class="key">n</button>
-                            <button class="key">m</button>
-                            <button class="key remove"><i class="fas fa-backspace"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4"></div>
-        </div>
+    <div class="guess-grid" id = "guess-grid" data-guess-grid>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
     </div>
+    <div class="keyboard">
+        <button class="key" data-key="Q">q</button>
+        <button class="key" data-key="W">w</button>
+        <button class="key" data-key="E">e</button>
+        <button class="key" data-key="R">R</button>
+        <button class="key" data-key="T">t</button>
+        <button class="key" data-key="Y">y</button>
+        <button class="key" data-key="U">u</button>
+        <button class="key" data-key="I">i</button>
+        <button class="key" data-key="O">o</button>
+        <button class="key" data-key="P">p</button>
 
-    <script src = "script.js"></script>
+        <div class="space"></div>
+
+        <button class="key" data-key="A">a</button>
+        <button class="key" data-key="S">s</button>
+        <button class="key" data-key="D">d</button>
+        <button class="key" data-key="F">f</button>
+        <button class="key" data-key="G">g</button>
+        <button class="key" data-key="H">h</button>
+        <button class="key" data-key="J">j</button>
+        <button class="key" data-key="K">k</button>
+        <button class="key" data-key="L">l</button>
+
+        <div class="space"></div>
+
+        <button class="key large" data-enter>Enter</button>
+
+        <button class="key" data-key="Z">z</button>
+        <button class="key" data-key="X">x</button>
+        <button class="key" data-key="C">c</button>
+        <button class="key" data-key="V">v</button>
+        <button class="key" data-key="B">b</button>
+        <button class="key" data-key="N">n</button>
+        <button class="key" data-key="M">m</button>
+
+        <button class="key large" data-delete>
+            <i class="fa-solid fa-delete-left"></i>
+        </button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
